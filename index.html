@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu </title>
+    <link rel = "stylesheet" href = "style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   
+    <script defer src="https://code.jquery.com/jquery-3.7.1.js"> </script>
+    <script defer src="https://cdn.datatables.net/2.0.3/js/dataTables.js"> </script>
+    <script defer src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"> </script>
+    <script defer src="script.js"></script>
+
+    <link rel="icon" type="image/png" href="icon.jpg">
+
+
+   <style>
+        .bold-text{
+        font-weight: bold;
+        }
+        @media (max-width: 767.58px) {
+            h1{
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 568.98px) {
+            h1{
+                font-size: 1.5rem;
+            }
+        }
+        body{
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+        }
+        h1{
+            text-align: center;
+            font-weight: bold;
+        }
+        table{
+            width: 200%;
+            border-collapse: collapse;
+        }
+        th, td , tfoot, tbody{
+            padding: 3rem;
+            border: 7px solid lightslategray;
+            text-align: center;
+            font-weight: bold;
+        }
+        tr{
+            tr:nth-child(even){
+                background-color: #f2f2f2;
+            }
+        }
+  
+    </style>
+</head>
+<body>
+
+ <div class="container pt-5 text-center">
+      <h1> <mark class="header">Rikku's Cupcake </mark> </h1>
+    
+        <div class="table-responsive">
+    
+            <table id="example" class="table table-striped" style="width:100%">
+                <thead> 
+                    <tr>
+                        <th> <b> <mark class="head">Invoice </mark>  </b> </th>
+                        <th> <b><mark class="head"> Customer's Name  </mark></Customer></th>
+                        <th><b><mark class="head"> Ship </mark></th>
+                        <th><b><mark class="head"> Item Name </mark></th>
+                        <th><b> <mark class="head"> Quantity </mark> </th>
+                        <th><b><mark class="head">Price </mark></th>
+                        <th><b> <mark class="head">Total Price </mark></th>
+                        <th><b> <mark class="head">Status </mark></th>
+                    </tr>
+               
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td> 001</td>
+                        <td> Anne</td>
+                        <td> Cavite</td>
+                        <td> Chocolate Cupcake</td>
+                        <td> 12</td>
+                        <td> $3</td>
+                        <td>  $36</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td>002</td>
+                        <td>Bea</td>
+                        <td>Zapote</td>
+                        <td>Strawberry Cupcake</td>
+                        <td>6</td>
+                        <td>$3</td>
+                        <td>$18</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                    </tr>
+
+                    <tr>
+                        <td>003</td>
+                        <td>Charlie</td>
+                        <td>Alabang</td>
+                        <td>Mango Cupcake</td>
+                        <td>9</td>
+                        <td>$3</td>
+                        <td>$27</td>
+                        <td> <mark class="pending"> Pending</mark> </td>
+                    </tr>
+
+                    <tr>
+                        <td>004</td>
+                        <td>David</td>
+                        <td>Imus</td>
+                        <td>Red Velvet Cupcake</td>
+                        <td>24</td>
+                        <td>$4</td>
+                        <td>$96</td>
+                        <td> <mark class="cancelled"> Cancelled</mark> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>005</td>
+                        <td>Eugene</td>
+                        <td>Dasma</td>
+                        <td>Oreo Cupcake</td>
+                        <td>12</td>
+                        <td>$3</td>
+                        <td>$36</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                    </tr>
+
+                    <tr>
+                        <td>006</td>
+                        <td>Fiona</td>
+                        <td>Fairview</td>
+                        <td>Cheese Cupcake</td>
+                        <td>36</td>
+                        <td>$4</td>
+                        <td>$144</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                    </tr>
+
+                    <tr>
+                        <td>007</td>
+                        <td>Georgie</td>
+                        <td>Pilar</td>
+                        <td>Vanilla Cupcake</td>
+                        <td>12</td>
+                        <td>$3</td>
+                        <td>$36</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                    </tr>
+
+                    <tr>
+                        <td>008</td>
+                        <td>Honey</td>
+                        <td>Delnor</td>
+                        <td>Avocado Cupcake</td>
+                        <td>15</td>
+                        <td>$3</td>
+                        <td>$15</td>
+                        <td> <mark class="pending"> Pending</mark> </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td>009</td>
+                        <td>Ivan</td>
+                        <td>Muntinlupa</td>
+                        <td>Graham Cupcake</td>
+                        <td>24</td>
+                        <td>$3</td>
+                        <td>$72</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                    </tr>
+
+                    <tr>
+                        <td>010</td>
+                        <td>Jane</td>
+                        <td>Talon Uno</td>
+                        <td>Apple Cupcake</td>
+                        <td>15</td>
+                        <td>$4</td>
+                        <td>$60</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                    </tr>
+
+
+                    
+                    <tr>
+                        <td>011</td>
+                        <td>Kate</td>
+                        <td>Talon Singko</td>
+                        <td>Banana Cupcake</td>
+                        <td>20</td>
+                        <td>$3</td>
+                        <td>$60</td>
+                        <td> <mark class="cancelled"> Cancelled</mark> </td>
+                    </tr>
+
+
+                    
+                    <tr>
+                        <td>012</td>
+                        <td>Linda</td>
+                        <td>Grandeur</td>
+                        <td>Pineapple Cupcake</td>
+                        <td>18</td>
+                        <td>$3</td>
+                        <td>$54</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                    </tr>
+
+
+                    
+                    <tr>
+                        <td>013</td>
+                        <td>Mike</td>
+                        <td>Royal South</td>
+                        <td>Watermelon Cupcake</td>
+                        <td>6</td>
+                        <td>$3</td>
+                        <td>$18</td>
+                        <td> <mark class="pending"> Pending</mark> </td>
+                    </tr>
+
+
+                    
+                    <tr>
+                        <td>014</td>
+                        <td>Nancy</td>
+                        <td>Annex</td>
+                        <td>Peach Cupcake</td>
+                        <td>9</td>
+                        <td>$3</td>
+                        <td>$27</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                    </tr>
+
+
+                    
+                    <tr>
+                        <td>015</td>
+                        <td>Oscar</td>
+                        <td>Jetty</td>
+                        <td>Cherry Cupcake</td>
+                        <td>8</td>
+                        <td>$4</td>
+                        <td>$32</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                    </tr>
+
+
+                    
+                    <tr>
+                        <td>016</td>
+                        <td>Patricia</td>
+                        <td>Delnor</td>
+                        <td>Blueberry Cupcake</td>
+                        <td>20</td>
+                        <td>$4</td>
+                        <td>$80</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                    </tr>
+
+
+                    
+                    <tr>
+                        <td>017</td>
+                        <td>Queen</td>
+                        <td>Moonwalk</td>
+                        <td>Plum Cupcake</td>
+                        <td>17</td>
+                        <td>$3</td>
+                        <td>$51</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                    </tr>
+
+
+                    
+                    <tr>
+                        <td>018</td>
+                        <td>Ron</td>
+                        <td>Greenhills</td>
+                        <td>Pear Cupcake</td>
+                        <td>15</td>
+                        <td>$3</td>
+                        <td>$15</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                    </tr>
+
+
+                    
+                    <tr>
+                        <td>019</td>
+                        <td>Sam</td>
+                        <td>Shaw</td>
+                        <td>Raspberry Cupcake</td>
+                        <td>30</td>
+                        <td>$3</td>
+                        <td>$90</td>
+                        <td> <mark class="cancelled"> Cancelled</mark> </td>
+                    </tr>
+
+
+                    
+                    <tr>
+                        <td>020</td>
+                        <td>Thomas</td>
+                        <td>Northgate</td>
+                        <td>Lemon Cupcake</td>
+                        <td>100</td>
+                        <td>$5</td>
+                        <td>$150</td>
+                        <td> <mark class="delivered" >Delivered </mark></td>
+                    </tr>
+
+
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th> <b> <mark class="head">Invoice </mark>  </b> </th>
+                        <th> <b><mark class="head"> Customer's Name  </mark></Customer></th>
+                        <th><b><mark class="head"> Ship </mark></th>
+                        <th><b><mark class="head"> Item Name </mark></th>
+                        <th><b> <mark class="head"> Quantity </mark> </th>
+                        <th><b><mark class="head">Price </mark></th>
+                        <th><b> <mark class="head">Total Price </mark></th>
+                        <th><b> <mark class="head">Status </mark></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+ </div>
+</body>
+</html>

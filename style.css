@@ -1,0 +1,27 @@
+body {
+    background: url(gray.jpg) no-repeat;
+    background-size: cover;
+}
+.bold-text{
+    font-weight: bold;
+}
+.pending {
+    background-color: orange; 
+    color: darkblue;
+}
+.delivered {
+    background-color: green; 
+    color: darkblue;
+}
+.cancelled{
+    background-color: red; 
+    color: darkblue;
+}
+.head{
+    background-color: lightcyan; 
+    color: darkblue;
+}
+.header{
+    background-color: lightcyan; 
+    color: darkblue;
+}
